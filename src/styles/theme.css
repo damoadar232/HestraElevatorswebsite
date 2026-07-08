@@ -126,6 +126,11 @@
 
   body {
     @apply bg-background text-foreground;
+    /* Prevent any transient horizontal overflow (from animated transforms,
+       sub-pixel rounding, etc.) from creating a flickering horizontal scrollbar.
+       `clip` (not `hidden`) is used so it never establishes a scroll container,
+       keeping `position: sticky` descendants working. */
+    overflow-x: clip;
   }
 
   /**
@@ -135,6 +140,10 @@
 
   html {
     font-size: var(--font-size);
+    /* Always reserve the vertical scrollbar gutter so the layout width never
+       changes when the scrollbar appears/disappears (route changes, modals,
+       lazy-loaded images). This is what eliminates the horizontal "shake". */
+    scrollbar-gutter: stable;
   }
 
   h1 {

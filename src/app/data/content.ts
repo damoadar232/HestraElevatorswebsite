@@ -45,7 +45,7 @@ export const INDUSTRIES = [
 ];
 
 export const WHY = [
-  { title: "15+ Years of Engineering Excellence", desc: "Over a decade and a half delivering elevator solutions across India's most demanding projects — from 5-star hotels to metro infrastructure." },
+  { title: "10+ Years of Engineering Excellence", desc: "Over a decade and a half delivering elevator solutions across India's most demanding projects — from 5-star hotels to metro infrastructure." },
   { title: "ISO 9001:2015 Certified Processes", desc: "Every stage — design, manufacturing, installation — follows internationally certified quality management systems." },
   { title: "500+ Successful Installations", desc: "A proven track record spanning residential, commercial, healthcare, and industrial verticals." },
   { title: "100+ Expert Technicians Nationwide", desc: "Factory-trained service engineers available in all major cities with rapid response SLAs." },

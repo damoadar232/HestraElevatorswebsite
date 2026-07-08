@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { NAV_ROUTES } from "../data/content";
-import { A, PP, IN } from "../shared/ui";
+import { A, IN } from "../shared/ui";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,13 +30,12 @@ export function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
-          <Link to="/" className="flex items-center gap-2.5 shrink-0" aria-label="Hestra Elevators — Home">
-            <div className="w-8 h-8 rounded-sm flex items-center justify-center" style={{ background: A }}>
-              <span className="text-white text-xs font-bold" style={PP}>HE</span>
-            </div>
-            <span className="font-bold text-xs md:text-sm tracking-[0.12em] uppercase transition-colors hidden sm:block" style={{ color: textCol, ...PP }}>
-              Hestra Elevators
-            </span>
+          <Link to="/" className="flex items-center shrink-0" aria-label="Hestra Elevators — Home">
+            <img
+              src="/images/NavBarLogo.png"
+              alt="Hestra Elevators"
+              className="h-8 md:h-11 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center mx-6" aria-label="Main navigation">

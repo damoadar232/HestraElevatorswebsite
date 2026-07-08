@@ -11,7 +11,7 @@ import { A, PP, IN, Btn, FadeUp, Label } from "../shared/ui";
 const FEATURES = [
   { icon: Search, title: "Free Site Inspection", desc: "On-site assessment by certified engineers at no cost." },
   { icon: ClipboardList, title: "Customized Solutions", desc: "Tailored elevator systems designed for your building." },
-  { icon: Wrench, title: "Certified Engineers", desc: "Factory-trained professionals with 15+ years experience." },
+  { icon: Wrench, title: "Certified Engineers", desc: "Factory-trained professionals with 10+ years experience." },
   { icon: CheckCircle, title: "Premium Quality Components", desc: "OEM-grade parts from globally trusted manufacturers." },
   { icon: FileText, title: "Safety Compliance", desc: "Full adherence to IS 14665 and NBC 2016 standards." },
   { icon: Factory, title: "Fast Installation", desc: "Streamlined project execution with minimal downtime." },

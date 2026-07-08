@@ -18,7 +18,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
           className="flex items-center justify-center gap-3 mb-8">
           <span className="block w-10 h-[1.5px] bg-white/50" />
-          <span className="text-xs font-semibold tracking-[0.3em] uppercase text-white/70" style={IN}>Precision Engineering Since 2009</span>
+          <span className="text-xs font-semibold tracking-[0.3em] uppercase text-white/70" style={IN}>Precision Engineering Since 2016</span>
           <span className="block w-10 h-[1.5px] bg-white/50" />
         </motion.div>
 
