@@ -5,36 +5,25 @@ import { NAV_ROUTES } from "../data/content";
 import { A, IN } from "../shared/ui";
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === "/";
-
-  useEffect(() => {
-    if (!isHome) { setScrolled(true); return; }
-    const handler = () => setScrolled(window.scrollY > 60);
-    handler();
-    window.addEventListener("scroll", handler, { passive: true });
-    return () => window.removeEventListener("scroll", handler);
-  }, [isHome]);
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
-  const navBg = scrolled || open || !isHome ? "bg-white shadow-sm" : "bg-transparent";
-  const textCol = scrolled || open || !isHome ? "#111111" : "#ffffff";
+  const textCol = "#111111";
 
   const isActive = (path: string) =>
     path === "/" ? location.pathname === "/" : location.pathname.startsWith(path);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
+        <div className="flex items-center justify-between h-[68px] md:h-[78px] lg:h-[88px]">
           <Link to="/" className="flex items-center shrink-0" aria-label="Hestra Elevators — Home">
             <img
               src="/images/NavBarLogo.png"
               alt="Hestra Elevators"
-              className="h-8 md:h-11 w-auto object-contain"
+              className="h-14 md:h-[70px] lg:h-20 w-auto object-contain"
             />
           </Link>
 

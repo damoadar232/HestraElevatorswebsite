@@ -16,7 +16,7 @@ export function IntroPreview() {
             Engineering Trust, Floor by Floor.
           </h2>
           <p className="text-[#5F5F5F] leading-relaxed mb-6" style={IN}>
-            Founded in 2009, Hestra Elevators has grown into one of India's most trusted elevator engineering
+            Founded in 2016, Hestra Elevators has grown into one of India's most trusted elevator engineering
             companies — delivering precision vertical transportation solutions across residential, commercial,
             healthcare, and industrial sectors nationwide.
           </p>
