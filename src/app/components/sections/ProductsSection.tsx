@@ -36,7 +36,7 @@ export function ProductsSection({ limit, showFilter = true, showViewAll = false,
             <FadeUp key={p.name} delay={i * 0.06}>
               <article className="bg-white rounded-sm overflow-hidden border border-[#E5E5E5] group hover:shadow-lg hover:-translate-y-1 transition-all duration-250 h-full">
                 <div className="relative h-52 bg-[#E5E5E5] overflow-hidden">
-                  <img src={`https://images.unsplash.com/${p.img}?w=600&h=400&fit=crop&auto=format`} alt={p.name}
+                  <img src={p.img.startsWith("/") ? p.img : `https://images.unsplash.com/${p.img}?w=600&h=400&fit=crop&auto=format`} alt={p.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   <span className="absolute bottom-3 left-3 text-[10px] font-semibold tracking-widest uppercase text-white/80 bg-black/30 px-2 py-1 rounded-sm" style={IN}>{p.spec}</span>
                 </div>

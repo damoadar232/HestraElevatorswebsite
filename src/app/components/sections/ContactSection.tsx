@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
+import { COMPANY_CONTACT } from "../../data/content";
 import { A, PP, IN, FadeUp, Btn } from "../../shared/ui";
 import { SectionHeader } from "./SectionHeader";
 
@@ -21,7 +22,7 @@ export function ContactSection() {
                 {[
                   { key: "name", label: "Full Name", type: "text", placeholder: "Rajesh Kumar" },
                   { key: "email", label: "Email Address", type: "email", placeholder: "rajesh@company.com" },
-                  { key: "phone", label: "Phone Number", type: "tel", placeholder: "+91 98765 43210" },
+                  { key: "phone", label: "Phone Number", type: "tel", placeholder: COMPANY_CONTACT.phone },
                   { key: "building", label: "Building Type", type: "text", placeholder: "Commercial Tower / Hospital..." },
                 ].map(f => (
                   <div key={f.key}>
@@ -49,27 +50,64 @@ export function ContactSection() {
 
           <FadeUp delay={0.15}>
             <div className="flex flex-col gap-5">
-              {[
-                { icon: MapPin, title: "Head Office", lines: ["Hestra Elevators Pvt. Ltd.", "Sector 44, Gurugram — 122003", "Haryana, India"] },
-                { icon: Phone, title: "Phone & WhatsApp", lines: ["+91 98765 43210", "+91 11 4567 8900"] },
-                { icon: Mail, title: "Email", lines: ["sales@hestraelevators.com", "support@hestraelevators.com"] },
-                { icon: Clock, title: "Business Hours", lines: ["Mon–Sat: 9:00 AM – 6:00 PM", "Emergency: 24 × 7"] },
-              ].map(item => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.title} className="bg-white border border-[#E5E5E5] rounded-sm p-6 flex gap-4">
-                    <div className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0" style={{ background: "#EEF4F8" }}>
-                      <Icon size={18} style={{ color: A }} />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-sm mb-2" style={{ color: "#111111", ...PP }}>{item.title}</div>
-                      {item.lines.map(l => <div key={l} className="text-xs text-[#5F5F5F]" style={IN}>{l}</div>)}
-                    </div>
-                  </div>
-                );
-              })}
+              <div className="bg-white border border-[#E5E5E5] rounded-sm p-6 flex gap-4">
+                <div className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0" style={{ background: "#EEF4F8" }}>
+                  <MapPin size={18} style={{ color: A }} />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm mb-2" style={{ color: "#111111", ...PP }}>Head Office</div>
+                  <div className="text-xs text-[#5F5F5F] mb-1" style={IN}>{COMPANY_CONTACT.name}</div>
+                  {COMPANY_CONTACT.addressLines.map(line => (
+                    <div key={line} className="text-xs text-[#5F5F5F]" style={IN}>{line}</div>
+                  ))}
+                  <a
+                    href={COMPANY_CONTACT.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 text-xs font-semibold hover:opacity-80 transition-opacity"
+                    style={{ color: A, ...IN }}
+                  >
+                    View on Google Maps
+                  </a>
+                </div>
+              </div>
 
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+              <div className="bg-white border border-[#E5E5E5] rounded-sm p-6 flex gap-4">
+                <div className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0" style={{ background: "#EEF4F8" }}>
+                  <Phone size={18} style={{ color: A }} />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm mb-2" style={{ color: "#111111", ...PP }}>Phone & WhatsApp</div>
+                  <a href={COMPANY_CONTACT.phoneHref} className="text-xs text-[#5F5F5F] hover:text-[#2F5D7C] transition-colors" style={IN}>
+                    {COMPANY_CONTACT.phone}
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-white border border-[#E5E5E5] rounded-sm p-6 flex gap-4">
+                <div className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0" style={{ background: "#EEF4F8" }}>
+                  <Mail size={18} style={{ color: A }} />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm mb-2" style={{ color: "#111111", ...PP }}>Email</div>
+                  <a href={COMPANY_CONTACT.emailHref} className="text-xs text-[#5F5F5F] hover:text-[#2F5D7C] transition-colors break-all" style={IN}>
+                    {COMPANY_CONTACT.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-white border border-[#E5E5E5] rounded-sm p-6 flex gap-4">
+                <div className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0" style={{ background: "#EEF4F8" }}>
+                  <Clock size={18} style={{ color: A }} />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm mb-2" style={{ color: "#111111", ...PP }}>Business Hours</div>
+                  <div className="text-xs text-[#5F5F5F]" style={IN}>Mon–Sat: 9:00 AM – 6:00 PM</div>
+                  <div className="text-xs text-[#5F5F5F]" style={IN}>Emergency: 24 × 7</div>
+                </div>
+              </div>
+
+              <a href={COMPANY_CONTACT.whatsappHref} target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 py-4 text-sm font-semibold text-white rounded-sm hover:opacity-90 transition-all"
                 style={{ background: "#25D366", ...IN }}>
                 <MessageCircle size={18} /> Chat on WhatsApp
@@ -78,7 +116,9 @@ export function ContactSection() {
               <div className="bg-[#2F5D7C] text-white rounded-sm p-6">
                 <div className="font-bold text-base mb-2" style={PP}>Emergency Breakdown?</div>
                 <p className="text-white/75 text-sm mb-4" style={IN}>24 × 7 emergency team for trapped passenger rescue and critical breakdowns.</p>
-                <div className="flex items-center gap-2 font-bold text-lg" style={PP}><Phone size={18} /> 1800-XXX-XXXX</div>
+                <a href={COMPANY_CONTACT.phoneHref} className="flex items-center gap-2 font-bold text-lg hover:opacity-90 transition-opacity" style={PP}>
+                  <Phone size={18} /> {COMPANY_CONTACT.phone}
+                </a>
               </div>
             </div>
           </FadeUp>

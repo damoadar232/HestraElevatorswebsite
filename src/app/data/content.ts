@@ -4,9 +4,9 @@ import {
 } from "lucide-react";
 
 export const PRODUCTS = [
-  { cat: "passenger", name: "Passenger Elevators", desc: "Smooth, high-capacity vertical transport for commercial and residential buildings with premium cabin aesthetics.", spec: "Up to 2000 kg / 4 m/s", img: "photo-1558618666-fcd25c85cd64", features: ["Gearless drive technology", "Premium cabin finishes", "Intelligent dispatch", "Energy regenerative drives"], applications: ["Office towers", "Residential complexes", "Mixed-use developments"] },
-  { cat: "home", name: "Home Elevators", desc: "Compact residential elevators that blend seamlessly with luxury interiors with whisper-quiet operation.", spec: "Up to 400 kg / 0.6 m/s", img: "photo-1486325212027-8081e485255e", features: ["Minimal pit requirement", "Whisper-quiet operation", "Custom interior design", "Compact footprint"], applications: ["Villas", "Bungalows", "Duplex homes"] },
-  { cat: "hospital", name: "Hospital Elevators", desc: "Wide-cabin healthcare lifts engineered for bed transport, with hygienic surfaces and priority dispatch.", spec: "Up to 2500 kg / 2 m/s", img: "photo-1519494026892-80bbd2d6fd0d", features: ["Wide cabin for stretchers", "Antibacterial surfaces", "Priority dispatch", "Emergency power backup"], applications: ["Hospitals", "Clinics", "Medical centres"] },
+  { cat: "passenger", name: "Passenger Elevators", desc: "Smooth, high-capacity vertical transport for commercial and residential buildings with premium cabin aesthetics.", spec: "Up to 2000 kg / 4 m/s", img: "/images/Elevator9.png", features: ["Gearless drive technology", "Premium cabin finishes", "Intelligent dispatch", "Energy regenerative drives"], applications: ["Office towers", "Residential complexes", "Mixed-use developments"] },
+  { cat: "home", name: "Home Elevators", desc: "Compact residential elevators that blend seamlessly with luxury interiors with whisper-quiet operation.", spec: "Up to 400 kg / 0.6 m/s", img: "/images/Elevator2.jpeg", features: ["Minimal pit requirement", "Whisper-quiet operation", "Custom interior design", "Compact footprint"], applications: ["Villas", "Bungalows", "Duplex homes"] },
+  { cat: "hospital", name: "Hospital Elevators", desc: "Wide-cabin healthcare lifts engineered for bed transport, with hygienic surfaces and priority dispatch.", spec: "Up to 2500 kg / 2 m/s", img: "/images/Hospital.png", features: ["Wide cabin for stretchers", "Antibacterial surfaces", "Priority dispatch", "Emergency power backup"], applications: ["Hospitals", "Clinics", "Medical centres"] },
   { cat: "freight", name: "Freight Elevators", desc: "Heavy-duty goods lifts for industrial and warehouse environments built to handle demanding daily loads.", spec: "Up to 10,000 kg / 0.5 m/s", img: "photo-1504307651254-35680f356dfd", features: ["Reinforced cabin structure", "Heavy-duty doors", "Load weighing system", "Industrial-grade controls"], applications: ["Warehouses", "Factories", "Loading docks"] },
   { cat: "capsule", name: "Capsule Elevators", desc: "Panoramic glass cabs that transform vertical travel into a scenic architectural experience.", spec: "Up to 1000 kg / 6 m/s", img: "photo-1555529669-e69e7aa0ba9a", features: ["360° panoramic glass", "Architectural integration", "LED ambient lighting", "High-speed travel"], applications: ["Hotels", "Malls", "Landmark buildings"] },
   { cat: "mrl", name: "Machine Room-Less (MRL)", desc: "Space-saving gearless drive technology with 30% smaller footprint and Class IE3 energy efficiency.", spec: "Up to 1600 kg / 2.5 m/s", img: "photo-1545324418-cc1a3fa10c00", features: ["No machine room required", "30% space savings", "IE3 energy efficiency", "Reduced installation cost"], applications: ["Mid-rise buildings", "Retrofit projects", "Space-constrained sites"] },
@@ -100,12 +100,16 @@ export const MAINTENANCE_BENEFITS = [
 ];
 
 export const PROJECTS = [
-  { cat: "commercial", name: "Prestige Tech Park", loc: "Bengaluru", type: "MRL Passenger", floors: 22, cap: "16 units", year: 2023, img: "photo-1486325212027-8081e485255e" },
-  { cat: "residential", name: "Oberoi Realty Tower", loc: "Mumbai", type: "High-Speed Passenger", floors: 45, cap: "8 units", year: 2022, img: "photo-1460317442991-0ec209397118" },
-  { cat: "hospital", name: "Apollo Hospitals Wing", loc: "Chennai", type: "Hospital Elevators", floors: 12, cap: "6 units", year: 2023, img: "photo-1519494026892-80bbd2d6fd0d" },
-  { cat: "hotel", name: "ITC Grand Bharat", loc: "Gurgaon", type: "Capsule & Passenger", floors: 18, cap: "10 units", year: 2022, img: "photo-1551882547-ff40c4a49f39" },
-  { cat: "mall", name: "Nexus Elante Mall", loc: "Chandigarh", type: "Escalators & Capsule", floors: 4, cap: "14 units", year: 2021, img: "photo-1555529669-e69e7aa0ba9a" },
-  { cat: "government", name: "State Secretariat Complex", loc: "Hyderabad", type: "Passenger & Freight", floors: 15, cap: "20 units", year: 2023, img: "photo-1545324418-cc1a3fa10c00" },
+  { cat: "commercial", name: "Prestige Tech Park", loc: "Bengaluru", type: "MRL Passenger", floors: 22, cap: "16 units", year: 2023, img: "/images/commercial.png" },
+  { cat: "residential", name: "Oberoi Realty Tower", loc: "Mumbai", type: "High-Speed Passenger", floors: 45, cap: "8 units", year: 2022, img: "/images/Elavator1.jpeg" },
+  { cat: "hospital", name: "Apollo Hospitals Wing", loc: "Chennai", type: "Hospital Elevators", floors: 12, cap: "6 units", year: 2023, img: "/images/Hospital.png" },
+  { cat: "hotel", name: "ITC Grand Bharat", loc: "Gurgaon", type: "Capsule & Passenger", floors: 18, cap: "10 units", year: 2022, img: "/images/Elevator7.jpeg" },
+  { cat: "mall", name: "Nexus Elante Mall", loc: "Chandigarh", type: "Escalators & Capsule", floors: 4, cap: "14 units", year: 2021, img: "/images/Elevator6.jpeg" },
+  { cat: "government", name: "State Secretariat Complex", loc: "Hyderabad", type: "Passenger & Freight", floors: 15, cap: "20 units", year: 2023, img: "/images/Elevator10.jpg" },
+  { cat: "commercial", name: "Corporate Tower Installation", loc: "Pune", type: "Passenger Elevators", floors: 28, cap: "12 units", year: 2024, img: "/images/Elevator3.jpeg" },
+  { cat: "residential", name: "Luxury Residential Complex", loc: "Delhi NCR", type: "Home Elevators", floors: 32, cap: "6 units", year: 2023, img: "/images/Elevator4.jpeg" },
+  { cat: "commercial", name: "High-Rise Passenger System", loc: "Kolkata", type: "High-Speed Passenger", floors: 35, cap: "10 units", year: 2024, img: "/images/Elevator9.png" },
+  { cat: "residential", name: "Premium Villa Elevators", loc: "Hyderabad", type: "Home Elevators", floors: 4, cap: "2 units", year: 2023, img: "/images/Elevator2.jpeg" },
 ];
 
 export const PROJECT_CATS = ["All", "commercial", "residential", "hospital", "hotel", "mall", "government"] as const;
@@ -138,22 +142,22 @@ export const VALUES = [
 ];
 
 export const LEADERSHIP = [
-  { name: "Vikram Hestra", role: "Founder & CEO", bio: "25+ years in vertical transportation engineering. Former lead engineer at a global elevator OEM." },
-  { name: "Priya Menon", role: "Chief Technology Officer", bio: "Specialist in gearless drive systems and IoT-enabled elevator monitoring platforms." },
+  { name: "Harsha Vardhan", role: "Founder & CEO", bio: "10+ years in vertical transportation engineering. lead engineer at a leading elevator manufacturer." },
+  { name: "Dhanunjay P", role: "Chief Technology Officer", bio: "Specialist in gearless drive systems and IoT-enabled elevator monitoring platforms." },
   { name: "Arun Desai", role: "Director of Operations", bio: "Oversees nationwide installation teams and manufacturing quality across 12 service centres." },
   { name: "Kavitha Reddy", role: "Head of Safety & Compliance", bio: "Certified lift inspector with expertise in IS 14665 compliance and statutory inspections." },
 ];
 
 export const GALLERY_IMAGES = [
-  { cat: "commercial", title: "Prestige Tech Park Lobby", img: "photo-1486325212027-8081e485255e" },
-  { cat: "residential", title: "Luxury Home Elevator", img: "photo-1460317442991-0ec209397118" },
-  { cat: "hospital", title: "Hospital Elevator Installation", img: "photo-1519494026892-80bbd2d6fd0d" },
-  { cat: "hotel", title: "Hotel Capsule Elevator", img: "photo-1555529669-e69e7aa0ba9a" },
-  { cat: "commercial", title: "Corporate Tower Interior", img: "photo-1545324418-cc1a3fa10c00" },
-  { cat: "mall", title: "Shopping Mall Atrium", img: "photo-1551882547-ff40c4a49f39" },
-  { cat: "industrial", title: "Freight Elevator System", img: "photo-1504307651254-35680f356dfd" },
-  { cat: "residential", title: "Premium Cabin Finish", img: "photo-1558618666-fcd25c85cd64" },
-  { cat: "hotel", title: "Panoramic Glass Cabin", img: "photo-1555529669-e69e7aa0ba9a" },
+  { cat: "commercial", title: "Commercial Elevator Installation", img: "/images/Elavator1.jpeg" },
+  { cat: "residential", title: "Passenger Elevator Cabin", img: "/images/Elevator2.jpeg" },
+  { cat: "commercial", title: "Modern Elevator Interior", img: "/images/Elevator3.jpeg" },
+  { cat: "hospital", title: "Hospital Elevator Installation", img: "/images/Hospital.png" },
+  { cat: "hotel", title: "Premium Lift Design", img: "/images/Elevator9.png" },
+  { cat: "mall", title: "Shopping Complex Elevator", img: "/images/Elevator6.jpeg" },
+  { cat: "industrial", title: "Industrial Freight Elevator", img: "/images/Elevator7.jpeg" },
+  { cat: "residential", title: "Residential Elevator Cabin", img: "/images/Elevator4.jpeg" },
+  { cat: "commercial", title: "Office Building Elevator", img: "/images/Elevator10.jpg" },
 ];
 
 export const GALLERY_CATS = ["All", "commercial", "residential", "hospital", "hotel", "mall", "industrial"] as const;
@@ -190,3 +194,23 @@ export const NAV_ROUTES = [
   { label: "Safety", path: "/safety" },
   { label: "Gallery", path: "/gallery" },
 ] as const;
+
+export const COMPANY_CONTACT = {
+  name: "Hestra Elevators Pvt. Ltd.",
+  address: "Plot No. 3, Road No. 5, Srinivas Nagar Colony, Chintal, Hyderabad - 500054.",
+  addressLines: [
+    "Plot No. 3, Road No. 5,",
+    "Srinivas Nagar Colony, Chintal,",
+    "Hyderabad - 500054.",
+  ],
+  phone: "+91 7794880858",
+  phoneHref: "tel:+917794880858",
+  whatsappHref: "https://wa.me/917794880858",
+  email: "hestraelevators2025@gmail.com",
+  emailHref: "mailto:hestraelevators2025@gmail.com",
+  instagram: "https://www.instagram.com/hestraelevators/",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Plot+No.+3,+Road+No.+5,+Srinivas+Nagar+Colony,+Chintal,+Hyderabad+-+500054",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=Plot+No.+3,+Road+No.+5,+Srinivas+Nagar+Colony,+Chintal,+Hyderabad+-+500054&output=embed",
+} as const;

@@ -18,12 +18,12 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-[68px] md:h-[78px] lg:h-[88px]">
+        <div className="flex items-center justify-between h-[75px]">
           <Link to="/" className="flex items-center shrink-0" aria-label="Hestra Elevators — Home">
             <img
               src="/images/NavBarLogo.png"
               alt="Hestra Elevators"
-              className="h-14 md:h-[70px] lg:h-20 w-auto object-contain"
+              className="h-[52px] sm:h-[58px] lg:h-[62px] w-auto object-contain"
             />
           </Link>
 

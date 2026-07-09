@@ -30,7 +30,7 @@ export function GallerySection() {
           {filtered.map((img, i) => (
             <FadeUp key={img.title + i} delay={i * 0.05}>
               <button onClick={() => setLightbox(img)} className="relative group overflow-hidden rounded-sm aspect-[4/3] w-full cursor-pointer">
-                <img src={`https://images.unsplash.com/${img.img}?w=700&h=500&fit=crop&auto=format`} alt={img.title}
+                <img src={img.img} alt={img.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-end p-4">
                   <span className="text-white text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity" style={IN}>{img.title}</span>
@@ -50,7 +50,7 @@ export function GallerySection() {
               <X size={28} />
             </button>
             <motion.img initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }}
-              src={`https://images.unsplash.com/${lightbox.img}?w=1200&h=800&fit=crop&auto=format`}
+              src={lightbox.img}
               alt={lightbox.title} className="max-w-full max-h-[85vh] object-contain rounded-sm"
               onClick={e => e.stopPropagation()} />
           </motion.div>

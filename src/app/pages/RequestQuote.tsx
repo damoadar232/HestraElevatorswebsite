@@ -6,6 +6,7 @@ import {
 import { PageLayout } from "../components/layout/PageLayout";
 import { PageHero } from "../components/layout/PageHero";
 import { FAQSection } from "../components/sections/FAQSection";
+import { COMPANY_CONTACT } from "../data/content";
 import { A, PP, IN, Btn, FadeUp, Label } from "../shared/ui";
 
 const FEATURES = [
@@ -171,7 +172,7 @@ export default function RequestQuote() {
 
             {/* Right column — form */}
             <FadeUp delay={0.1}>
-              <div className="bg-white rounded-xl border border-[#E5E5E5] shadow-[0_8px_40px_rgba(0,0,0,0.06)] p-6 md:p-8 lg:sticky lg:top-28">
+              <div className="bg-white rounded-xl border border-[#E5E5E5] shadow-[0_8px_40px_rgba(0,0,0,0.06)] p-6 md:p-8 lg:sticky lg:top-[92px]">
                 <div className="mb-6">
                   <h3 className="text-xl font-bold mb-2" style={{ color: "#111111", ...PP }}>Quotation Request Form</h3>
                   <p className="text-xs text-[#8B8B8B]" style={IN}>Fields marked with * are required</p>
@@ -235,7 +236,7 @@ export default function RequestQuote() {
                       <FieldLabel required>Mobile Number</FieldLabel>
                       <input
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder={COMPANY_CONTACT.phone}
                         value={form.mobile}
                         onChange={e => update("mobile", e.target.value)}
                         className={`${inputClass} ${errors.mobile ? "border-red-400 focus:border-red-400 focus:ring-red-100" : ""}`}
@@ -303,7 +304,7 @@ export default function RequestQuote() {
                     <FieldLabel>Installation Location</FieldLabel>
                     <input
                       type="text"
-                      placeholder="City, State — e.g. Gurugram, Haryana"
+                      placeholder="City, State — e.g. Hyderabad, Telangana"
                       value={form.location}
                       onChange={e => update("location", e.target.value)}
                       className={inputClass}

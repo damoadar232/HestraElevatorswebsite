@@ -33,7 +33,7 @@ export function ProjectsSection({ limit, showFilter = true, showViewAll = false,
             <FadeUp key={p.name} delay={i * 0.07}>
               <article className="bg-white border border-[#E5E5E5] rounded-sm overflow-hidden group hover:shadow-lg hover:-translate-y-0.5 transition-all duration-250">
                 <div className="relative h-52 overflow-hidden">
-                  <img src={`https://images.unsplash.com/${p.img}?w=700&h=450&fit=crop&auto=format`} alt={p.name}
+                  <img src={p.img.startsWith("/") ? p.img : `https://images.unsplash.com/${p.img}?w=700&h=450&fit=crop&auto=format`} alt={p.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   <span className="absolute bottom-3 right-3 text-[10px] font-semibold tracking-widest uppercase bg-black/30 text-white px-2.5 py-1 rounded-sm capitalize" style={IN}>{p.cat}</span>
                 </div>

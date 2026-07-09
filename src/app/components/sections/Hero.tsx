@@ -32,7 +32,7 @@ export function Hero() {
         </motion.h1>
 
         <motion.p initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.55 }}
-          className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed" style={IN}>
+          className="text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed" style={{ ...IN, fontSize: "0.9rem" }}>
           Hestra Elevators delivers world-class elevator manufacturing, installation,
           modernization, and Annual Maintenance Contracts — engineered for safety, built for longevity.
         </motion.p>
@@ -51,12 +51,12 @@ export function Hero() {
           </Link>
         </motion.div>
       </div>
-
+      {/* 
       <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.8, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="text-[10px] tracking-[0.25em] text-white/50 uppercase" style={IN}>Scroll</span>
         <ChevronDown size={16} className="text-white/50" />
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
