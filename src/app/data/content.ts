@@ -7,8 +7,8 @@ export const PRODUCTS = [
   { cat: "passenger", name: "Passenger Elevators", desc: "Smooth, high-capacity vertical transport for commercial and residential buildings with premium cabin aesthetics.", spec: "Up to 2000 kg / 4 m/s", img: "/images/Elevator9.png", features: ["Gearless drive technology", "Premium cabin finishes", "Intelligent dispatch", "Energy regenerative drives"], applications: ["Office towers", "Residential complexes", "Mixed-use developments"] },
   { cat: "home", name: "Home Elevators", desc: "Compact residential elevators that blend seamlessly with luxury interiors with whisper-quiet operation.", spec: "Up to 400 kg / 0.6 m/s", img: "/images/Elevator2.jpeg", features: ["Minimal pit requirement", "Whisper-quiet operation", "Custom interior design", "Compact footprint"], applications: ["Villas", "Bungalows", "Duplex homes"] },
   { cat: "hospital", name: "Hospital Elevators", desc: "Wide-cabin healthcare lifts engineered for bed transport, with hygienic surfaces and priority dispatch.", spec: "Up to 2500 kg / 2 m/s", img: "/images/Hospital.png", features: ["Wide cabin for stretchers", "Antibacterial surfaces", "Priority dispatch", "Emergency power backup"], applications: ["Hospitals", "Clinics", "Medical centres"] },
-  { cat: "freight", name: "Freight Elevators", desc: "Heavy-duty goods lifts for industrial and warehouse environments built to handle demanding daily loads.", spec: "Up to 10,000 kg / 0.5 m/s", img: "photo-1504307651254-35680f356dfd", features: ["Reinforced cabin structure", "Heavy-duty doors", "Load weighing system", "Industrial-grade controls"], applications: ["Warehouses", "Factories", "Loading docks"] },
-  { cat: "capsule", name: "Capsule Elevators", desc: "Panoramic glass cabs that transform vertical travel into a scenic architectural experience.", spec: "Up to 1000 kg / 6 m/s", img: "photo-1555529669-e69e7aa0ba9a", features: ["360° panoramic glass", "Architectural integration", "LED ambient lighting", "High-speed travel"], applications: ["Hotels", "Malls", "Landmark buildings"] },
+  // { cat: "freight", name: "Freight Elevators", desc: "Heavy-duty goods lifts for industrial and warehouse environments built to handle demanding daily loads.", spec: "Up to 10,000 kg / 0.5 m/s", img: "photo-1504307651254-35680f356dfd", features: ["Reinforced cabin structure", "Heavy-duty doors", "Load weighing system", "Industrial-grade controls"], applications: ["Warehouses", "Factories", "Loading docks"] },
+  // { cat: "capsule", name: "Capsule Elevators", desc: "Panoramic glass cabs that transform vertical travel into a scenic architectural experience.", spec: "Up to 1000 kg / 6 m/s", img: "photo-1555529669-e69e7aa0ba9a", features: ["360° panoramic glass", "Architectural integration", "LED ambient lighting", "High-speed travel"], applications: ["Hotels", "Malls", "Landmark buildings"] },
   { cat: "mrl", name: "Machine Room-Less (MRL)", desc: "Space-saving gearless drive technology with 30% smaller footprint and Class IE3 energy efficiency.", spec: "Up to 1600 kg / 2.5 m/s", img: "photo-1545324418-cc1a3fa10c00", features: ["No machine room required", "30% space savings", "IE3 energy efficiency", "Reduced installation cost"], applications: ["Mid-rise buildings", "Retrofit projects", "Space-constrained sites"] },
   { cat: "hydraulic", name: "Hydraulic Elevators", desc: "Proven hydraulic systems for low-rise buildings up to 6 floors with ultra-smooth ride quality.", spec: "Up to 5000 kg / 0.6 m/s", img: "photo-1460317442991-0ec209397118", features: ["Smooth ride quality", "Cost-effective for low-rise", "Reliable hydraulic drive", "Easy maintenance access"], applications: ["Low-rise commercial", "Residential buildings", "Small offices"] },
   { cat: "goods", name: "Dumbwaiters & Goods Lifts", desc: "Compact service lifts for restaurants, hotels, and hospitals with flush-mounted door configurations.", spec: "Up to 500 kg / 0.5 m/s", img: "photo-1551882547-ff40c4a49f39", features: ["Compact shaft design", "Food-grade options", "Quiet operation", "Multiple stop configurations"], applications: ["Restaurants", "Hotels", "Hospitals", "Libraries"] },
@@ -98,18 +98,80 @@ export const MAINTENANCE_BENEFITS = [
   "Priority emergency response with guaranteed SLAs",
   "Detailed maintenance reports and audit trails",
 ];
-
 export const PROJECTS = [
-  { cat: "commercial", name: "Prestige Tech Park", loc: "Bengaluru", type: "MRL Passenger", floors: 22, cap: "16 units", year: 2023, img: "/images/commercial.png" },
-  { cat: "residential", name: "Oberoi Realty Tower", loc: "Mumbai", type: "High-Speed Passenger", floors: 45, cap: "8 units", year: 2022, img: "/images/Elavator1.jpeg" },
-  { cat: "hospital", name: "Apollo Hospitals Wing", loc: "Chennai", type: "Hospital Elevators", floors: 12, cap: "6 units", year: 2023, img: "/images/Hospital.png" },
-  { cat: "hotel", name: "ITC Grand Bharat", loc: "Gurgaon", type: "Capsule & Passenger", floors: 18, cap: "10 units", year: 2022, img: "/images/Elevator7.jpeg" },
-  { cat: "mall", name: "Nexus Elante Mall", loc: "Chandigarh", type: "Escalators & Capsule", floors: 4, cap: "14 units", year: 2021, img: "/images/Elevator6.jpeg" },
-  { cat: "government", name: "State Secretariat Complex", loc: "Hyderabad", type: "Passenger & Freight", floors: 15, cap: "20 units", year: 2023, img: "/images/Elevator10.jpg" },
-  { cat: "commercial", name: "Corporate Tower Installation", loc: "Pune", type: "Passenger Elevators", floors: 28, cap: "12 units", year: 2024, img: "/images/Elevator3.jpeg" },
-  { cat: "residential", name: "Luxury Residential Complex", loc: "Delhi NCR", type: "Home Elevators", floors: 32, cap: "6 units", year: 2023, img: "/images/Elevator4.jpeg" },
-  { cat: "commercial", name: "High-Rise Passenger System", loc: "Kolkata", type: "High-Speed Passenger", floors: 35, cap: "10 units", year: 2024, img: "/images/Elevator9.png" },
-  { cat: "residential", name: "Premium Villa Elevators", loc: "Hyderabad", type: "Home Elevators", floors: 4, cap: "2 units", year: 2023, img: "/images/Elevator2.jpeg" },
+  {
+    cat: "commercial",
+    name: "Reliance Mart",
+    loc: "Gadwal",
+    type: "MRL Passenger",
+    floors: 6,
+    capacity: "8 persons/ 670 kg",
+    year: 2026,
+    img: "/images/Elevator2.jpeg"
+  },
+  {
+    cat: "residential",
+    name: "A V Vinoothana Homes",
+    loc: "Pocharam , Hyderabad",
+    type: "High-Speed Passenger",
+    floors: 3,
+    capacity: "6 persons/ 450 kg",
+    year: 2025,
+    img: "/images/Elavator1.jpeg"
+  },
+  {
+    cat: "Residential",
+    name: "Kondapur Girls Hostel",
+    loc: " Kondapur, Hyderabad ",
+    type: " High-Speed Passenger",
+    floors: 7,
+    capacity: "8 persons/ 670 kg",
+    year: 2026,
+    img: "/images/hostel.jpeg"
+  },
+  {
+    cat: "Residential",
+    name: "Modernize Infra Apartments",
+    loc: "Ameenpur, Hyderabad",
+    type: "High-Speed Passenger",
+    floors: 6,
+    capacity: "6 persons/ 408 kg",
+    year: 2026,
+    img: "/images/Elevator6.jpeg"
+  },
+  {
+    cat: "Reseidential",
+    name: "Rames Homes",
+    loc: "boduppal, Hyderabad",
+    type: "High-Speed Passenger",
+    floors: 4,
+    capacity: "6 persons/ 408 kg",
+    year: 2026,
+    img: "/images/boduppal.jpeg"
+  },
+  {
+    cat: "school",
+    name: "Sri vidya Vihari school",
+    loc: " Ghatkeshari , Hyderabad",
+    type: "High-Speed Passenger",
+    floors: 4,
+    capacity: "6 persons/ 408 kg",
+    year: 2026,
+    img: "/images/school1.jpeg"
+  },
+
+  {
+    cat: "Resedential",
+    name: "Balaji Apartments",
+    loc: " GandiMaisamma , Hyderabad",
+    type: "High-Speed Passenger",
+    floors: 5,
+    capacity: "6 persons/ 408 kg",
+    year: 2026,
+    img: "/images/Elevator10.jpg"
+  },
+
+
 ];
 
 export const PROJECT_CATS = ["All", "commercial", "residential", "hospital", "hotel", "mall", "government"] as const;
